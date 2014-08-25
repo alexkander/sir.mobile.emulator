@@ -94,7 +94,7 @@
               
               <h1 id="overview" class="page-header">Información general</h1>
               <p class="lead">
-                Para hacer uso del Sir Mobile Emulator se requiere primera mente incluir en nuestro proyectos como se indica en la sección de <a href="#/getstarted"><em>Descargar</em></a>
+                Para hacer uso del Sir Mobile Emulator se requiere primeramente incluir en nuestro proyecto como se indica en la sección de <a href="getstarted.html#download"><em>Descargar</em></a> del apartado de comenzar.
               </p>
 
               <h1 id="configuration" class="page-header">Configuración</h1>
@@ -104,7 +104,7 @@
 
               <h3 id="via-attribute">Vía atributo</h3>
               <p>
-                Para realizar una configuración e esta forma, se debe colocar un atributo <code>sme-auto</code> en el elemento que se desea establecer como pantalla del dispositivo. <code>sme.js</code> se encargará de establecer estos elementos como emuladores en el momento de su carga:
+                Para realizar una configuración de esta forma, se debe colocar un atributo <code>sme-auto</code> en el elemento que se desea establecer como pantalla del dispositivo. <code>sme.js</code> se encargará de establecer estos elementos como emuladores en el momento de su carga:
               </p>
               <pre highlight="samples/via_attribute.html"></pre>
 
@@ -117,7 +117,7 @@
               <div class="bs-callout bs-callout-warning">
                 <h4>Emuladores separados</h4>
                 <p>
-                  Tome en cuenta que se generará una instancia por separado por cada elemento con la etiqueta <code>sme-auto</code>, y por cada incluido en la llamada JavaScript.
+                  Tome en cuenta que se generará una instancia por separado para cada elemento con la etiqueta <code>sme-auto</code>, y por cada elemento incluido en la llamada JavaScript.
                 </p>
               </div>
 
@@ -128,7 +128,7 @@
               <pre highlight="samples/params_via_atribute.html"></pre>
 
               <p>
-                Si la configuración de realiza desde una llamada JavaScript, los parámetros son indicados, de igual forma como atributos de un objeto JSON, pero esa vez es pasado como primer parámetro del llamado:
+                Si la configuración se realiza desde una llamada JavaScript, los parámetros son indicados, de igual forma como atributos de un objeto JSON, pero esa vez es pasado como primer parámetro del llamado:
               </p>
               <pre highlight="samples/params_via_js.html"></pre>
 
@@ -167,7 +167,7 @@
                     <td>
                       <code>string('all')</code>:
                       <span>
-                        Tipo de dispositivos disponibles. Filtra la lista de dispositivos disponibles indicados en el parámetro <code>aDevices</code>, dejando solo aquellos que sean del mismo tipo que el indicado. Si su valor es <code>'all'</code> se dejarán todos los dispositivos. Para una ver la lista de tipos de dispositivos ir a <a href="#devices-types">Tipos de dispositivos</a>.
+                        Tipo de dispositivos disponibles. Filtra la lista de dispositivos disponibles indicados en el parámetro <code>aDevices</code>, dejando sólo aquellos que sean del mismo tipo que el indicado. Si su valor es <code>'all'</code> se dejarán todos los dispositivos. Para una ver la lista de tipos de dispositivos ir a <a href="#devices-types">Tipos de dispositivos</a>.
                       </span>
                     </td>
                   </tr>
@@ -177,7 +177,7 @@
                     <td>
                       <code>string('portrait')</code>:
                       <span>
-                        Orientación del dispositivo: vertical (<code>'portrait'</code>) o horizontal (<code>'landscape'</code>). Si se carga una configuración desde el localSorage se omitirá este parámetro.
+                        Orientación del dispositivo: vertical (<code>'portrait'</code>) u horizontal (<code>'landscape'</code>). Si se carga una configuración desde el localSorage se omitirá este parámetro.
                       </span>
                     </td>
                   </tr>
@@ -277,7 +277,7 @@
                     <td>
                       <code>object({})</code>:
                       <span>
-                        Objeto donde cada atributo representa la icono a agregar en la barra de iconos, lenzado a la a la URL indicada en el nombre del atributo.
+                        Objeto donde cada atributo representa el icono a agregar en la barra superior, enlanzado a la URL indicada en el nombre del atributo.
                       </span>
                     </td>
                   </tr>
@@ -287,7 +287,7 @@
                     <td>
                       <code>boolean(true)</code>:
                       <span>
-                        Mostrar/ocultar el logotipo información del plugin.
+                        Mostrar/ocultar el logotipo de información del plugin.
                       </span>
                     </td>
                   </tr>
@@ -312,7 +312,7 @@
 
               <h3 id="devices-types">Tipos de dispositivos</h3>
               <p>
-                Básica mente solo existe 2 tipos de dispositivos: los teléfonos inteligentes (<code>phone</code>) y las tabletas <code>tablet</code>. Sir Mobile Emulator, permite filtrar por tipos los dispositivos que se podrán seleccionar en la barra de acciones mediante la opción <code>sDeviceType</code>. Los valores posibles para esta opción son:
+                Básicamente sólo existe 2 tipos de dispositivos: los teléfonos inteligentes (<code>phone</code>) y las tabletas <code>tablet</code>. Sir Mobile Emulator, permite filtrar por tipos los dispositivos que se podrán seleccionar en la barra de acciones mediante la opción <code>sDeviceType</code>. Los valores posibles para esta opción son:
               </p>
               <ul>
                 <li><code>all</code>: Incluir todos los dispositivos.</li>
@@ -339,9 +339,6 @@
                 <li><code>nexus-s</code>: Nexus S</li>
               </ul>
 
-              <!-- <h3 id="adding-devices">Agregando dispositivos</h3>
-              <p>Próximamente</p> -->
-
             </div>
 
             <div class="col-sm-3">
@@ -367,7 +364,6 @@
                     <ul class="nav">
                       <li><a href="#devices-types">Tipos de dispositivos</a></li>
                       <li><a href="#devices-available">Dispositivos disponibles</a></li>
-                      <!-- <li><a href="#adding-devices">Agregando dispositivos</a></li> -->
                     </ul> 
                   </li>
                 </ul>

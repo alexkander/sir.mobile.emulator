@@ -26,6 +26,30 @@ module.exports = function(grunt) {
           dot: true,
           src: ['<%= app.dist %>']
         }]
+      },
+      scripts: {
+        files: [{
+          dot: true,
+          src: ['<%= app.dist %>/scripts']
+        }]
+      },
+      styles: {
+        files: [{
+          dot: true,
+          src: ['<%= app.dist %>/styles']
+        }]
+      },
+      images: {
+        files: [{
+          dot: true,
+          src: ['<%= app.dist %>/images']
+        }]
+      },
+      fonts: {
+        files: [{
+          dot: true,
+          src: ['<%= app.dist %>/fonts']
+        }]
       }
     },
 
@@ -99,11 +123,22 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-compress');
   grunt.loadNpmTasks('grunt-contrib-copy');
 
-  grunt.registerTask('build', [
-    'clean:dist',
+  grunt.registerTask('build:images', [
+    'clean:images',
     'imagemin',
+  ]);
+
+  grunt.registerTask('build:code', [
+    'clean:styles',
+    'clean:sccripts',
     'cssmin',
     'uglify',
+  ]);
+
+  grunt.registerTask('build', [
+    'clean:dist',
+    'build:images',
+    'build:code',
     'copy',
     'compress'
   ]);
