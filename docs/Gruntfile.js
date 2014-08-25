@@ -130,7 +130,7 @@ module.exports = function(grunt) {
       html: ['<%= app.dist %>/*.html', '<%= app.dist %>/views/**/*.html'],
       css: ['<%= app.dist %>/styles/**/*.css'],
       options: {
-        assetsDirs: ['<%= app.dist %>']
+        assetsDirs: ['<%= app.dist %>', '<%= app.dist %>/images']
       }
     },
 
