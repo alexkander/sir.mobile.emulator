@@ -32,7 +32,7 @@ La documentación corrospondiente está [disponible en línea](http://sirideas.g
 
 ## Licencia
 
-Este software está licenciado bajo la [MIT](changelog.md), documentado bajo [CC BY 3.0](http://creativecommons.org/licenses/by/3.0/).
+Este software está licenciado bajo la [MIT](LICENSE), documentado bajo [CC BY 3.0](http://creativecommons.org/licenses/by/3.0/).
 
 ## Instalación mínima
 
@@ -49,7 +49,7 @@ Por favor reporte los bugs, sugerencias y agregé peticiones en el [GitHub issue
 
 ## Registro de cambios
 
-Ver [changelog](changelog.md).
+Ver [changelog](CHANGELOG.md).
 
 ## Historia
 * No se tiene registro exacto del inicio del desarrollo de esta utilidad, pero se puede ubicar al comienzo de 2013.
