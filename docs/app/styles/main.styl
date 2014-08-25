@@ -1,0 +1,325 @@
+/* ========================================================================
+ * Sir Mobile Emulator Docs: main.styl v 0.0.1-beta
+ * http://sirideas.github.com/sir.mobile.emulator/
+ * ========================================================================
+ * Copyright 2014-2015 Sir Ideas, C. A.
+ * Licensed under MIT (https://github.com/sirdieas/sir.mobile.emulator/LICENSE)
+ * ========================================================================
+ */
+
+@import 'globals.styl'
+
+_main-color = #040078;
+_low-color = #040048;
+_middle-color = #5450B8;
+_ligth-color = #9490F8;
+
+_header-height = 50px;
+_introduction-height = 240px;
+_introduction-height-home = 290px;
+_footer-height = 140px;
+
+html,body{
+  height: 100%;
+}
+
+body{
+  overflow: auto;
+  position: relative;
+}
+
+code{
+  color: _middle-color;
+}
+
+a{
+  cursor: pointer;
+}
+
+.small,
+small{
+  a{
+    font-size: 100%;
+  }
+}
+
+a,
+.navbar-default .navbar-brand,
+.navbar-default .navbar-nav > li > a{
+  color: _main-color;
+  &:hover,
+  &:focus{
+    color: _low-color;
+  }
+}
+
+.navbar-brand{
+  small, .small{
+    color: _ligth-color;
+  }
+}
+
+.btn-primary{
+  background-color: _main-color;
+  border-color: _low-color;
+  &:hover,
+  &:focus{
+    background-color: _low-color;
+  }
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
+  small, .small{
+    color: _main-color;
+  }
+}
+
+h1[id],
+h3[id]{
+  margin-top: -50px;
+  padding-top: 70px;
+}
+
+.navbar-fixed-top .navbar-brand a{
+  &:hover,
+  &:focus{
+    text-decoration: none;
+  }
+}
+
+#header{
+  _box-shadow: 0px 1px 6px rgba(0,0,0,.5);
+}
+
+#footer{
+  bottom: 0;
+  height: _footer-height;
+}
+
+.footer-ul li{
+  list-style: none;
+}
+
+.container-view{
+  padding-top: _header-height;
+  margin-bottom: _footer-height;
+  _box-shadow: 0px -1px 6px rgba(0,0,0,.5),
+               0px 1px 6px rgba(0,0,0,.5);
+}
+
+.container-view,
+.container-content{
+  position: relative;
+  background-color: white;
+  z-index: 1;
+}
+
+.container-content{
+  margin-top: 20px;
+}
+
+.container-fixed{
+  background-color: _main-color;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  color: white;
+  position: fixed;
+  left: 0;
+  width: 100%;
+  a{
+    color: _ligth-color;
+    &:hover,
+    &:focus{
+      color: white;
+    }
+  }
+}
+
+.container-introduction{
+  top: _header-height;
+  height: _introduction-height;
+  h1{
+    font-size: 60px;
+    // text-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+  }
+  p{
+    font-size: 24px;
+    // text-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+    color: _ligth-color;
+    &.small{
+      font-size: 16px;
+    }
+  }
+  .button-download{
+    margin: 20px 0px;
+  }
+  + .container-content{
+    margin-top: _introduction-height;
+    _box-shadow: 0px -1px 6px rgba(0,0,0,.5),
+                 0px 1px 6px rgba(0,0,0,.5);
+  }
+  &.home{
+    height: auto;
+    bottom: _footer-height;
+    p{
+      color: white;
+    }
+    + .container-content{
+      margin-top: _introduction-height-home;
+      .container{
+        padding-top: 50px
+      }
+    }
+    .btn{
+      color: _main-color
+    }
+  }
+}
+
+.side-nav{
+  padding-left: 20px;
+  &.affix{
+    top: _header-height;
+  }
+  >.nav{
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .nav{
+    >li>a{
+      display: block;
+      padding: 4px 20px;
+      font-size: 13px;
+      font-weight: 500;
+      color: #999;
+      &:hover,
+      &:focus{
+        padding-left: 19px;
+        color: _main-color;
+        text-decoration: none;
+        background-color: transparent;
+        border-left: 1px solid _main-color;
+      }
+    }
+    >.active{
+      >a:hover,
+      >a:focus{
+        padding-left: 19px;
+        color: _main-color;
+        text-decoration: none;
+        background-color: transparent;
+        border-left: 1px solid _main-color;
+      }
+      >a,
+      &:hover>a,
+      &:focus>a{
+        padding-left: 18px;
+        font-weight: 700;
+        color: _main-color;
+        background-color: transparent;
+        border-left: 2px solid _main-color;
+      }
+      >ul{
+        display: block;
+      }
+    }
+    .nav{
+      display: none;
+      padding-bottom: 10px;
+      >li>a{
+        padding-top: 1px;
+        padding-bottom: 1px;
+        padding-left: 30px;
+        font-size: 12px;
+        font-weight: 400;
+        &:hover,
+        &:focus{
+          padding-left: 29px;
+        }
+      }
+    }
+  }
+}
+
+.highlight{
+  padding: 9px 14px;
+  margin-bottom: 14px;
+  background-color: #f7f7f9;
+  border: 1px solid #e1e1e8;
+  border-radius: 4px;
+  pre {
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    word-break: normal;
+    word-wrap: nowrap;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+    code {
+      font-size: inherit;
+      color: #333;
+      &:first-child {
+        display: inline-block;
+        padding-right: 45px;
+      }
+    }
+  }
+}
+
+.live-example{
+  width: 100%;
+  min-height: 450px;
+  margin-right: 0;
+  margin-left: 0;
+  background-color: #fff;
+  border: #ddd 1px solid;
+  _border-radius: 4px;
+  _box-shadow: none;
+}
+
+.thumbnail{
+  border: none;
+}
+
+.featurette-divider {
+  margin: 80px 0;
+}
+
+.featurette{
+  h3{
+    margin-top: 110px;
+  }
+  h2{
+    font-size: 50px;
+  }
+}
+
+.bs-callout {
+  padding: 20px;
+  margin: 20px 0;
+  border: 1px solid #eee;
+  border-left-width: 5px;
+  border-radius: 3px;
+  h4 {
+    margin-top: 0;
+    margin-bottom: 5px;
+  }
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.bs-callout-warning {
+  border-left-color: #f0ad4e;
+  h4 {
+    color: #f0ad4e;
+  }
+}
+
+.bs-callout-info {
+  border-left-color: #5bc0de;
+  h4: {
+    color: #5bc0de;
+  }
+}

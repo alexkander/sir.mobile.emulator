@@ -1,0 +1,452 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <title>Sir Mobile Emulator</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="shortcut icon" href="favicon.ico"/>
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css styles/styles.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css" />
+    <!-- endbower -->
+    <link rel="stylesheet" href="js/google-code-prettify/prettify.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+
+  </head>
+  <body>
+
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+    <![endif]-->
+
+    <!-- Cabecera -->
+    <header id="header" class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+
+        <!-- Header -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <div class="navbar-brand">
+            <a href="./">Sir Mobile Emulator</a>
+            <span class="small"><span>por</span> <a target="_blank" href="http://sirideas.com">Sir Ideas, C.A.</a></span>
+          </div>
+          
+        </div>
+        
+        <!-- Menu -->
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="./">Inicio</a></li>
+            <li><a href="getstarted.html">Comenzar</a></li>
+            <li class="active"><a href="docs.html">Documentación</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="about.html">Acerca de</a></li>
+            <li><a target="_blank" href="https://github.com/SirIdeas/sir.mobile.emulator" alt="Fork me on GitHub">GitHub</a></li>
+            <!-- <li class="dropdown">
+              <a class="dropdown-toggle text-uppercase" data-toggle="dropdown">{{lang}} <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li ng-repeat="l in config.langs"><a ng-click="changeLang(l)">{{t[l]}}</a></li>
+              </ul>
+            </li> -->
+          </ul>
+        </div>
+
+      </div>
+    </header>
+
+    <!-- Vista principal -->
+    <div class="container-view">
+      
+      <!-- Cabecera -->
+      <div class="container-introduction container-fixed">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-9">
+              <h1>Documentación</h1>
+              <p>Aprenda como configurar la mayoría de las características disponibles en Sir Mobile Emulator.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Vista -->
+      <div class="container-content">
+        <div class="container">
+          <div class="row">
+
+            <div class="col-sm-9">
+              
+              <h1 id="overview" class="page-header">Información general</h1>
+              <p class="lead">
+                Para hacer uso del Sir Mobile Emulator se requiere primera mente incluir en nuestro proyectos como se indica en la sección de <a href="#/getstarted"><em>Descargar</em></a>
+              </p>
+
+              <h1 id="configuration" class="page-header">Configuración</h1>
+              <p class="lead">
+                Existen dos vías de realizar la configuración: vía atributo, o vía JavaScript.
+              </p>
+
+              <h3 id="via-attribute">Vía atributo</h3>
+              <p>
+                Para realizar una configuración e esta forma, se debe colocar un atributo <code>sme-auto</code> en el elemento que se desea establecer como pantalla del dispositivo. <code>sme.js</code> se encargará de establecer estos elementos como emuladores en el momento de su carga:
+              </p>
+              <pre highlight="samples/via_attribute.html"></pre>
+
+              <h3 id="via-js">Vía JavaScript</h3>
+              <p>
+                Para realizar la configuración por medio de una llamanda JavaScript:
+              </p>
+              <pre highlight="samples/via_js.html"></pre>
+
+              <div class="bs-callout bs-callout-warning">
+                <h4>Emuladores separados</h4>
+                <p>
+                  Tome en cuenta que se generará una instancia por separado por cada elemento con la etiqueta <code>sme-auto</code>, y por cada incluido en la llamada JavaScript.
+                </p>
+              </div>
+
+              <h1 id="params" class="page-header">Parámetros</h1>
+              <p class="lead">
+                En el caso de una configuración vía atributo los parámetros pueden ser especifícados como atributos de un objeto JSON indicado como valor de atributo <code>sme-auto</code>:
+              </p>
+              <pre highlight="samples/params_via_atribute.html"></pre>
+
+              <p>
+                Si la configuración de realiza desde una llamada JavaScript, los parámetros son indicados, de igual forma como atributos de un objeto JSON, pero esa vez es pasado como primer parámetro del llamado:
+              </p>
+              <pre highlight="samples/params_via_js.html"></pre>
+
+              <h3 id="options">Opciones</h3>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Opción</th>
+                    <th>Tipo(Valor por defecto):Descripción</th>
+                  </tr>
+                </thead>
+                <tbody>
+
+                  <tr>
+                    <td><code>sId</code><br></td>
+                    <td>
+                      <code>string(false)</code>:
+                      <span>
+                        Clave de ubicación de la configuración del emulador en el localStorage. Si su valor es <code>false</code>, no se cargará ni guardará la configuración.
+                      </span>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td><code>aDevices</code><br></td>
+                    <td>
+                      <code>string[](true)</code>:
+                      <span>
+                        Índices de lo dispositivos que estarán disponibles en el emulador. Si su valor es <code>true</code>, se tomará todos los dispositivos como disponibles. Si su valor es <code>false</code> no se permitirá cambiar de dispositivo. Para una ver la lista de dispositivos disponibles ir a <a href="#devices-available">Dispositivos disponibles</a>.
+                      </span>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td><code>sDeviceType</code><br></td>
+                    <td>
+                      <code>string('all')</code>:
+                      <span>
+                        Tipo de dispositivos disponibles. Filtra la lista de dispositivos disponibles indicados en el parámetro <code>aDevices</code>, dejando solo aquellos que sean del mismo tipo que el indicado. Si su valor es <code>'all'</code> se dejarán todos los dispositivos. Para una ver la lista de tipos de dispositivos ir a <a href="#devices-types">Tipos de dispositivos</a>.
+                      </span>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td><code>bOrientation</code><br></td>
+                    <td>
+                      <code>string('portrait')</code>:
+                      <span>
+                        Orientación del dispositivo: vertical (<code>'portrait'</code>) o horizontal (<code>'landscape'</code>). Si se carga una configuración desde el localSorage se omitirá este parámetro.
+                      </span>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td><code>bOrientations</code><br></td>
+                    <td>
+                      <code>boolean(true)</code>:
+                      <span>
+                        Permitir o deshabilitar el cambio de orientación del dispositivo.
+                      </span>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td><code>bOpen</code><br></td>
+                    <td>
+                      <code>boolean(true)</code>:
+                      <span>
+                        Mostrar la barra de opciones abierta/cerrada. Si se carga una configuración desde el localSorage se omitirá este parámetro.
+                      </span>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td><code>bShowOpen</code><br></td>
+                    <td>
+                      <code>boolean(true)</code>:
+                      <span>
+                        Mostrar/ocultar el botón para abrir/cerrar la barra de opciones.
+                      </span>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td><code>fZoom</code><br></td>
+                    <td>
+                      <code>float(1.0)</code>:
+                      <span>
+                        Valor de zoom actual. Si se carga una configuración desde el localSorage se omitirá este parámetro.
+                      </span>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td><code>fMinZoom</code><br></td>
+                    <td>
+                      <code>float(.1)</code>:
+                      <span>
+                        Valor mínimo de zoom permitido.
+                      </span>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td><code>fMaxZoom</code><br></td>
+                    <td>
+                      <code>float(2.0)</code>:
+                      <span>
+                        Valor máximo de zoom permitido.
+                      </span>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td><code>fIncZoom</code><br></td>
+                    <td>
+                      <code>float(.1)</code>:
+                      <span>
+                        Valor desplazamiento de zoom.
+                      </span>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td><code>bShowZoom</code><br></td>
+                    <td>
+                      <code>boolean(true)</code>:
+                      <span>
+                        Mostrar/ocultar botones de zoom.
+                      </span>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td><code>bShowOptions</code><br></td>
+                    <td>
+                      <code>boolean(true)</code>:
+                      <span>
+                        Mostrar/ocultar la barra de opciones.
+                      </span>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td><code>oLogos</code><br></td>
+                    <td>
+                      <code>object({})</code>:
+                      <span>
+                        Objeto donde cada atributo representa la icono a agregar en la barra de iconos, lenzado a la a la URL indicada en el nombre del atributo.
+                      </span>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td><code>bShowOptions</code><br></td>
+                    <td>
+                      <code>boolean(true)</code>:
+                      <span>
+                        Mostrar/ocultar el logotipo información del plugin.
+                      </span>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td><code>oActions</code><br></td>
+                    <td>
+                      <code>object({})</code>:
+                      <span>
+                        Objeto de acciones que representan las funciones que se ejecutará al hacer click en los botones con los mismos nombres de los atributos del objeto.
+                      </span>
+                    </td>
+                  </tr>
+
+                </tbody>
+              </table>
+
+              <h1 id="devices" class="page-header">Dispositivos</h1>
+              <p class="lead">
+                La lista de dispositivos disponibles en Sir Mobile Emulator asi como las medidas de sus pantallas fueron tomados de las medidas existentes en la opción Emulation de Developer tools de Google Chrome. La selección se basó principalmente en dos familias: la familia de iOS (iPhone y iPad) y la familia Nexus.
+              </p>
+
+              <h3 id="devices-types">Tipos de dispositivos</h3>
+              <p>
+                Básica mente solo existe 2 tipos de dispositivos: los teléfonos inteligentes (<code>phone</code>) y las tabletas <code>tablet</code>. Sir Mobile Emulator, permite filtrar por tipos los dispositivos que se podrán seleccionar en la barra de acciones mediante la opción <code>sDeviceType</code>. Los valores posibles para esta opción son:
+              </p>
+              <ul>
+                <li><code>all</code>: Incluir todos los dispositivos.</li>
+                <li><code>phone</code>: Incluir solo teléfonos.</li>
+                <li><code>tablet</code>: Incluir solo tabletas.</li>
+              </ul>
+
+              <h3 id="devices-available">Dispositivos disponibles</h3>
+              <p>
+                Los dispositivos disponibles nativamente en Sir Mobile Emulator son:
+              </p>
+
+              <ul>
+                <li><code>iphone-3g-3gs</code>: iPhone 3G y iPhone 3GS.</li>
+                <li><code>iphone-4</code>: iPhone 4</li>
+                <li><code>iphone-5</code>: iPhone 5</li>
+                <li><code>ipad-mini</code>: iPad Mini</li>
+                <li><code>ipad-3</code>: iPad 3</li>
+                <li><code>nexus-10</code>: Nexus 10</li>
+                <li><code>nexus-4</code>: Nexus 4</li>
+                <li><code>nexus-5</code>: Nexus 5</li>
+                <li><code>nexus-7</code>: Nexus 7</li>
+                <li><code>nexus-7-2</code>: Nexus 7 (2013)</li>
+                <li><code>nexus-s</code>: Nexus S</li>
+              </ul>
+
+              <!-- <h3 id="adding-devices">Agregando dispositivos</h3>
+              <p>Próximamente</p> -->
+
+            </div>
+
+            <div class="col-sm-3">
+              
+              <div id="sideBar" class="side-nav">
+                <ul class="nav">
+                  <li><a href="#overview">Información general</a></li>
+                  <li>
+                    <a href="#configuration">Configuración</a>
+                    <ul class="nav">
+                      <li><a href="#via-attribute">Vía atributo</a></li>
+                      <li><a href="#via-js">Vía JavaScript</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#params">Parámetros</a>
+                    <ul class="nav">  
+                      <li><a href="#options">Opciones</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#devices">Dispositivos</a>
+                    <ul class="nav">
+                      <li><a href="#devices-types">Tipos de dispositivos</a></li>
+                      <li><a href="#devices-available">Dispositivos disponibles</a></li>
+                      <!-- <li><a href="#adding-devices">Agregando dispositivos</a></li> -->
+                    </ul> 
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+        
+        <hr class="featurette-divider">
+
+      </div>
+
+    </div>
+
+    <footer id="footer" class="container-fixed">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="text-left">
+              <div class="small">Versión actual: v0.0.1-beta</div>
+              <div class="small">
+                Creado y mantenido en <a href="http://sirideas.com">Sir Ideas, C.A.</a> por <a href="http://twitter.com/arondn2">@arondn2</a>
+              </div>
+              <div class="small">
+                Plantilla basada en <a target="_blank" href="http://getbootstrap.com">Bootstrap</a>.
+              </div>
+              <div class="small">
+                Código licensiado bajo <a target="_blank" href="https://github.com/SirIdeas/sir.mobile.emulator/LICENSE">MIT</a>, documentado bajo <a target="_blank" href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <ul class="footer-ul">
+              <li><a href="./">Inicio</a></li>
+              <li><a href="getstarted.html">Comenzar</a></li>
+              <li><a href="docs.html">Documentación</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-4">
+            <ul class="footer-ul">
+              <li><a target="_blank" href="https://github.com/SirIdeas/sir.mobile.emulator" alt="Fork me on GitHub">GitHub</a></li>
+              <li><a href="about.html">Acerca de</a></li>
+              <li><a target="_blank" href="https://github.com/SirIdeas/sir.mobile.emulator/issues?state=open">Issues</a></li>
+              <li><a target="_blank" href="https://github.com/SirIdeas/sir.mobile.emulator/releases">Releases</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+     <!-- <script>
+       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+       ga('create', 'UA-XXXXX-X');
+       ga('send', 'pageview');
+    </script> -->
+
+    <!-- build:js scripts/oldieshim.js -->
+    <!--[if lt IE 9]>
+    <script src="../bower_components/es5-shim/es5-shim.js"></script>
+    <script src_configurationc="../bower_components/json3/lib/json3.min.js"></script>
+    <![endif]-->
+    <!-- endbuild -->
+    
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <!-- endbower -->
+    <script src="js/google-code-prettify/prettify.js"></script>
+    <script src="js/holder.js"></script>
+    <script src="scripts/app.js"></script>
+    <!-- endbuild -->
+
+</body>
+</html>

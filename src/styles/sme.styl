@@ -1,0 +1,267 @@
+/* ========================================================================
+ * Sir Mobile Emulator: sme.styl 0.0.1-beta
+ * http://sirideas.github.com/sir.mobile.emulator/
+ * ========================================================================
+ * Copyright 2014-2015 Sir Ideas, C. A.
+ * Licensed under MIT (https://github.com/sirdieas/sir.mobile.emulator/LICENSE)
+ * ========================================================================
+ */
+$margen = 5px
+$top-bar-heigth = 35px
+$top-bar-bg-color = #cccccc
+
+$option-color = #222222
+$option-group-bg-color = #ffffff
+$option-hover-color = #555555
+
+$device-list-width = 90px
+
+@font-face{
+  font-family: 'iconos';
+  src: url('../fonts/iconos.eot?58297023');
+  src: url('../fonts/iconos.eot?58297023#iefix') format('embedded-opentype'),
+       url('../fonts/iconos.woff?58297023') format('woff'),
+       url('../fonts/iconos.ttf?58297023') format('truetype'),
+       url('../fonts/iconos.svg?58297023#iconos') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'iconos';
+    src: url('fonts/iconos.svg?58297023#iconos') format('svg');
+  }
+}
+*/
+ 
+[class^="icon-"]:before, [class*=" icon-"]:before{
+  font-family: "iconos";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+     
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.icon-zoom-in:before{
+  content: '\e800';
+}
+.icon-zoom-out:before{
+  content: '\e801';
+}
+.icon-info-outline:before{
+  content: '\e802';
+}
+.icon-doc:before{
+  content: '\e803';
+}
+.icon-doc-landscape:before{
+  content: '\e804';
+}
+.icon-down-dir:before{
+  content: '\e805';
+}
+.icon-left-circled:before{
+  content: '\e806';
+}
+.icon-right-circled:before{
+  content: '\e807';
+}
+
+html,body{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+body{
+  font-size: 14px
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif
+}
+.sme-display{
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: #fff;
+}
+.sme-closed-hide{
+  display: none;
+}
+.sme-options-inner{
+  padding: $margen;
+  height: $top-bar-heigth - 2 * $margen;
+  float: left;
+}
+.sme-options{
+  position: absolute;
+  top: 0;
+  height: $top-bar-heigth;
+  left: 0;
+  background: $top-bar-bg-color;
+  width: 100%;
+  &.sme-closed{
+    width: auto;
+    border-radius: 0 0 15px 0;
+    .sme-hide-when-closed{
+      display: none;
+    }
+  }
+}
+.sme-option-group{
+  margin-left: $margen
+}
+.sme-list-container,
+.sme-option-group{
+  background: $option-group-bg-color;
+  border: 1px solid $option-color;
+  border-radius: 5px;
+}
+.sme-option{
+  color: $option-color;
+  line-height: $top-bar-heigth - $margen * 2;
+}
+.sme-option-group,
+.sme-option{
+  display: inline-block;
+  vertical-align: top;
+}
+.sme-option-group .sme-option{
+  line-height: $top-bar-heigth - $margen * 2 - 2px;
+}
+.sme-open-button{
+  font-size: 22px
+}
+.sme-option.icon-zoom-out,
+.sme-option.sme-zoom-button-text,
+.sme-option.icon-doc,
+.sme-option.sme-device-text{
+  border-right: 1px solid $option-color;
+}
+.sme-option.sme-device-text{
+  min-width: $device-list-width;
+}
+.sme-action{
+  cursor: pointer;
+  &:hover{
+    color: $option-hover-color;
+  }
+}
+.sme-action.sme-active{
+  background: $option-color;
+  color: $option-group-bg-color;
+}
+.sme-list{
+  vertical-align: top;
+  display: inline-block;
+  position: relative;
+}
+.sme-list-container{
+  position: absolute;
+  top: 100%;
+  left: $margen;
+  right: 0;
+  margin-top: -1px;
+  .sme-action{
+    padding: $margen $margen * 2;
+  }
+}
+.sme-list-container.sme-hide{
+  display: none;
+}
+.sme-text{
+  padding: 0 $margen;
+}
+.sme-right{
+  float: right
+}
+.sme-parent{
+  position: absolute;
+  top: $top-bar-heigth;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: auto;
+  padding: $margen;
+  &.sme-closed{
+    top: 0;
+  }
+}
+.sme-display-parent{
+  position: absolute;
+}
+.sme-display-group{
+  position: relative;
+  -webkit-transform-origin: 0 0;
+  -moz-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  -o-transform-origin: 0 0;
+  transform-origin: 0 0;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+.sme-display-size{
+  display: inline-block;
+  overflow: hidden;
+}
+.sme-display-img{
+  width: 100%;
+}
+.sme-vertical-align{
+  display: table;
+  width: 100%;
+  height: 100%;
+  >div{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+  }
+}
+.sme-buttons{
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+.sme-button{
+  position: absolute;
+  cursor: pointer;
+}
+
+$directions = landscape portrait
+$devices = iphone-3g-3gs iphone-4 iphone-5 ipad-mini ipad-3 nexus-10 nexus-4 nexus-5 nexus-7 nexus-7-2 nexus-s
+
+for $dir in $directions{
+  for $device in $devices{
+    .sme-device-{$device}-{$dir}{
+      background-image: url(../images/$device+'-'+$dir+'.png');
+    }
+  }
+}
