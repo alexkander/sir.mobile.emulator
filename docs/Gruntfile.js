@@ -1,6 +1,6 @@
 /* ========================================================================
  * Sir Mobile Emulator Docs: Grunfile
- * http://sirideas.github.com/sir.mobile.emulator/
+ * http://sirideas.github.io/sir.mobile.emulator/
  * ========================================================================
  * Copyright 2014-2015 Sir Ideas, C. A.
  * Licensed under MIT (https://github.com/sirdieas/sir.mobile.emulator/LICENSE)
@@ -87,7 +87,7 @@ module.exports = function(grunt) {
             '.htaccess',
             '*.html',
             '*.zip',
-            'data/*',
+            'data/**/*',
             'views/**/*.html',
             'images/**/*.{webp}',
             'fonts/*'

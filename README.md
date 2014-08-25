@@ -28,7 +28,7 @@ Sir Mobile Emulator es un a extensión de jQuery que permite observar como luce 
 
 ## Documentación
 
-La documentación corrospondiente está [disponible en línea](http://sirideas.github.com/sir.mobile.emulator/).
+La documentación corrospondiente está [disponible en línea](http://sirideas.github.io/sir.mobile.emulator/).
 
 ## Licencia
 
