@@ -69,6 +69,7 @@ body {
   height: 100%;
 }
 body {
+  background-color: #040078;
   overflow: auto;
   position: relative;
 }
@@ -162,14 +163,13 @@ h3[id] {
 .container-view,
 .container-content {
   position: relative;
-  background-color: #fff;
   z-index: 1;
 }
 .container-content {
   margin-top: 20px;
+  background-color: #fff;
 }
 .container-fixed {
-  background-color: #040078;
   padding-top: 30px;
   padding-bottom: 30px;
   color: #fff;
@@ -206,21 +206,31 @@ h3[id] {
   -webkit-box-shadow: 0px -1px 6px rgba(0,0,0,0.5), 0px 1px 6px rgba(0,0,0,0.5);
   box-shadow: 0px -1px 6px rgba(0,0,0,0.5), 0px 1px 6px rgba(0,0,0,0.5);
 }
-.container-introduction.home {
-  height: auto;
-  bottom: 140px;
-}
-.container-introduction.home p {
+.home {
+  margin: 0;
   color: #fff;
+  min-height: 100%;
 }
-.container-introduction.home + .container-content {
-  margin-top: 290px;
+.home h1 {
+  font-size: 60px;
 }
-.container-introduction.home + .container-content .container {
-  padding-top: 50px;
+.home p {
+  font-size: 24px;
 }
-.container-introduction.home .btn {
-  color: #040078;
+.footer {
+  margin-bottom: 30px;
+}
+.footer a {
+  color: #9490f8;
+}
+.main-section {
+  margin-top: 90px;
+  margin-bottom: 90px;
+}
+.large-description {
+  font-size: 14px;
+  margin: 50px 0px;
+  text-align: center;
 }
 .side-nav {
   padding-left: 20px;
@@ -361,11 +371,29 @@ h3[id] {
 .bs-callout-info h4: {
   color: #5bc0de;
 }
-.sme-96 {
+.navbar-logo {
   float: left;
-  height: 10px;
-  margin-left: -106px;
+  margin-top: -10px;
+  margin-left: -10px;
+  margin-right: 10px;
 }
-.container {
-  width: 960px;
+.navbar-logo img {
+  height: 40px;
+}
+.introduction-text,
+.footer-text {
+  text-align: left;
+}
+@media (max-width: 768px) {
+  .introduction-text,
+  .footer-text {
+    text-align: center;
+  }
+  .container-introduction h1 {
+    margin-top: 0px;
+    font-size: 40px;
+  }
+  .container-introduction p {
+    font-size: 16px;
+  }
 }

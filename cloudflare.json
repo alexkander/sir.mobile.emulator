@@ -1,7 +1,7 @@
 {
     
     "name": "SME",
-    "description": "Emulador visual de los dispositivos móviles mas utilizados en la actualidad para probar y presentar aplicaciones HTML5.",
+    "description": "Emulador visual de dispositivos móviles actuales para probar y presentar aplicaciones HTML5.",
     "version": "0.0.1-beta",
     "category": "library",
     "main": "dist/scripts/sme.min.js",

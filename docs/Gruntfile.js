@@ -70,9 +70,6 @@ module.exports = function(grunt) {
     },
 
     concat: {
-      options: {
-        separator: ';',
-      },
     },
     
     copy: {

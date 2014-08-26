@@ -108,7 +108,7 @@ module.exports = function(grunt) {
           dot: true,
           dest: '<%= app.dist %>',
           src: [
-            'LICENCE'
+            'LICENSE'
           ]
         }]
       }

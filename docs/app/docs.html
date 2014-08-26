@@ -42,11 +42,11 @@
           </button>
 
           <div class="navbar-brand">
-            <a href="./" class="sme-96">
-              <img src="images/sme96.png">
+            <a class="navbar-logo" href="./">
+              <img src="images/sme64.png">
             </a>
             <a href="./">Sir Mobile Emulator</a>
-            <span class="small"><span>por</span> <a target="_blank" href="http://sirideas.com">Sir Ideas, C.A.</a></span>
+            <span class="small hidden-xs"><span>por</span> <a target="_blank" href="http://sirideas.com">Sir Ideas, C.A.</a></span>
           </div>
           
         </div>
@@ -78,11 +78,15 @@
       
       <!-- Cabecera -->
       <div class="container-introduction container-fixed">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-9">
-              <h1>Documentación</h1>
-              <p>Aprenda como configurar la mayoría de las características disponibles en Sir Mobile Emulator.</p>
+        <div class="display-table">
+          <div class="display-table-cell vertical-align-middle introduction-text">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-9">
+                  <h1>Documentación</h1>
+                  <p>Aprenda como configurar la mayoría de las características disponibles en Sir Mobile Emulator.</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -113,7 +117,7 @@
 
               <h3 id="via-js">Vía JavaScript</h3>
               <p>
-                Para realizar la configuración por medio de una llamanda JavaScript:
+                Para realizar la configuración por medio de una llamada JavaScript:
               </p>
               <pre highlight="samples/via_js.html"></pre>
 
@@ -126,7 +130,7 @@
 
               <h1 id="params" class="page-header">Parámetros</h1>
               <p class="lead">
-                En el caso de una configuración vía atributo los parámetros pueden ser especifícados como atributos de un objeto JSON indicado como valor de atributo <code>sme-auto</code>:
+                En el caso de una configuración vía atributo los parámetros pueden ser especificados como atributos de un objeto JSON indicado como valor de atributo <code>sme-auto</code>:
               </p>
               <pre highlight="samples/params_via_atribute.html"></pre>
 
@@ -160,7 +164,7 @@
                     <td>
                       <code>string[](true)</code>:
                       <span>
-                        Índices de lo dispositivos que estarán disponibles en el emulador. Si su valor es <code>true</code>, se tomará todos los dispositivos como disponibles. Si su valor es <code>false</code> no se permitirá cambiar de dispositivo. Para una ver la lista de dispositivos disponibles ir a <a href="#devices-available">Dispositivos disponibles</a>.
+                        Índices de los dispositivos que estarán disponibles en el emulador. Si su valor es <code>true</code>, se tomará todos los dispositivos como disponibles. Si su valor es <code>false</code> no se permitirá cambiar de dispositivo. Para una ver la lista de dispositivos disponibles ir a <a href="#devices-available">Dispositivos disponibles</a>.
                       </span>
                     </td>
                   </tr>
@@ -300,7 +304,7 @@
                     <td>
                       <code>object({})</code>:
                       <span>
-                        Objeto de acciones que representan las funciones que se ejecutará al hacer click en los botones con los mismos nombres de los atributos del objeto.
+                        Objeto de acciones que representan las funciones que se ejecutará al hacer clic en los botones con los mismos nombres de los atributos del objeto.
                       </span>
                     </td>
                   </tr>
@@ -310,7 +314,7 @@
 
               <h1 id="devices" class="page-header">Dispositivos</h1>
               <p class="lead">
-                La lista de dispositivos disponibles en Sir Mobile Emulator asi como las medidas de sus pantallas fueron tomados de las medidas existentes en la opción Emulation de Developer tools de Google Chrome. La selección se basó principalmente en dos familias: la familia de iOS (iPhone y iPad) y la familia Nexus.
+                La lista de dispositivos disponibles en Sir Mobile Emulator así como las medidas de sus pantallas fueron tomados de las medidas existentes en la opción Emulation de Developer tools de Google Chrome. La selección se basó principalmente en dos familias: la familia de iOS (iPhone y iPad) y la familia Nexus.
               </p>
 
               <h3 id="devices-types">Tipos de dispositivos</h3>
@@ -344,7 +348,7 @@
 
             </div>
 
-            <div class="col-sm-3">
+            <div class="col-sm-3 hidden-xs">
               
               <div id="sideBar" class="side-nav">
                 <ul class="nav">
@@ -387,27 +391,28 @@
       <div class="container">
         <div class="row">
           <div class="col-sm-4">
-            <div class="text-left">
+            <div class="footer-text">
               <div class="small">Versión actual: v0.0.1-beta</div>
               <div class="small">
-                Creado y mantenido en <a href="http://sirideas.com">Sir Ideas, C.A.</a> por <a href="http://twitter.com/arondn2">@arondn2</a>
+                Creado y mantenido en <a href="http://sirideas.com">Sir Ideas, C.A.</a>
+                <!-- por <a href="http://twitter.com/arondn2">@arondn2</a> -->
               </div>
-              <div class="small">
+              <!-- <div class="small">
                 Plantilla basada en <a target="_blank" href="http://getbootstrap.com">Bootstrap</a>.
-              </div>
+              </div> -->
               <div class="small">
-                Código licensiado bajo <a target="_blank" href="https://github.com/SirIdeas/sir.mobile.emulator/blob/master/LICENSE">MIT</a>, documentado bajo <a target="_blank" href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.
+                Código licenciado bajo <a target="_blank" href="https://github.com/SirIdeas/sir.mobile.emulator/blob/master/LICENSE">MIT</a>, documentado bajo <a target="_blank" href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.
               </div>
             </div>
           </div>
-          <div class="col-sm-4">
+          <div class="col-sm-4 hidden-xs">
             <ul class="footer-ul">
               <li><a href="./">Inicio</a></li>
               <li><a href="getstarted.html">Comenzar</a></li>
               <li><a href="docs.html">Documentación</a></li>
             </ul>
           </div>
-          <div class="col-sm-4">
+          <div class="col-sm-4 hidden-xs">
             <ul class="footer-ul">
               <li><a target="_blank" href="https://github.com/SirIdeas/sir.mobile.emulator" alt="Fork me on GitHub">GitHub</a></li>
               <li><a href="about.html">Acerca de</a></li>
