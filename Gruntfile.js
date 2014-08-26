@@ -83,7 +83,7 @@ module.exports = function(grunt) {
     compress: {
       all:{
         options: {
-          archive: 'versions/<%= pkg.name %>-<%= pkg.version %>.dist-<%= grunt.template.today("yyyymmdd") %>.zip',
+          archive: 'dist/<%= pkg.name %>-<%= pkg.version %>.dist-<%= grunt.template.today("yyyymmdd") %>.zip',
           mode: 'zip'
         },
         expand: true,

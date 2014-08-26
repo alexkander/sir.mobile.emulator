@@ -11,7 +11,7 @@ Sir Mobile Emulator es una extensión de jQuery que permite observar como luce t
 <html>
   <head>
     <!-- SME's styles -->
-    <link rel="stylesheet" href="http://sirideas.github.io/sir.mobile.emulator/sme/styles/sme.min.css"/>
+    <link rel="stylesheet" href="http://sirideas.github.io/sir.mobile.emulator/dist/0.0.1-beta/styles/sme.min.css"/>
     <title>SirMobileEmulator</title>
   </head>
   <body>
@@ -20,7 +20,7 @@ Sir Mobile Emulator es una extensión de jQuery que permite observar como luce t
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include sme.js -->
-    <script src="http://sirideas.github.io/sir.mobile.emulator/sme/scripts/sme.min.js"></script>
+    <script src="http://sirideas.github.io/sir.mobile.emulator/dist/0.0.1-beta/scripts/sme.min.js"></script>
   </body>
 </html>
 ```
