@@ -17,7 +17,7 @@ module.exports = function(grunt) {
 
     app: {
       root: 'src',
-      dist: 'dist',
+      dist: 'dist/<%= pkg.version %>',
     },
 
     clean: {
