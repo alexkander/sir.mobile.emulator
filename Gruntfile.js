@@ -17,7 +17,8 @@ module.exports = function(grunt) {
 
     app: {
       root: 'src',
-      dist: 'dist/<%= pkg.version %>',
+      distRoot: 'docs/dist/dist',
+      dist: '<%= app.distRoot %>/<%= pkg.version %>'
     },
 
     clean: {
@@ -83,7 +84,7 @@ module.exports = function(grunt) {
     compress: {
       all:{
         options: {
-          archive: 'dist/<%= pkg.name %>-<%= pkg.version %>.dist-<%= grunt.template.today("yyyymmdd") %>.zip',
+          archive: '<%= app.distRoot %>/<%= pkg.name %>-<%= pkg.version %>.dist.zip',
           mode: 'zip'
         },
         expand: true,
@@ -107,6 +108,16 @@ module.exports = function(grunt) {
           expand: true,
           dot: true,
           dest: '<%= app.dist %>',
+          src: [
+            'LICENSE'
+          ]
+        }]
+      },
+      dist:{
+        files:[{
+          expand: true,
+          dot: true,
+          dest: 'docs/dist',
           src: [
             'LICENSE'
           ]
@@ -139,8 +150,9 @@ module.exports = function(grunt) {
     'clean:dist',
     'build:images',
     'build:code',
-    'copy',
-    'compress'
+    'copy:all',
+    'compress',
+    'copy:dist'
   ]);
 
 };

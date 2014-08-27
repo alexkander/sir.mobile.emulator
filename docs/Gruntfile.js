@@ -29,7 +29,11 @@ module.exports = function(grunt) {
       dist: {
         files: [{
           dot: true,
-          src: ['<%= app.dist %>']
+          src: [
+            '<%= app.dist %>/*',
+            '!<%= app.dist %>/dist',
+            '!<%= app.dist %>/.git*'
+          ]
         }]
       }
     },
