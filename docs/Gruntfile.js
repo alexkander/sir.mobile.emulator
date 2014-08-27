@@ -84,6 +84,7 @@ module.exports = function(grunt) {
             '.htaccess',
             '*.html',
             '*.zip',
+            '*.xml',
             'data/**/*',
             'views/**/*.html',
             'images/**/*.{webp}',
@@ -165,7 +166,7 @@ module.exports = function(grunt) {
   grunt.registerTask('build', [
     'clean:tmp',
     'clean:dist',
-    'wiredep:all',
+    // 'wiredep:all',
     'imagemin:all',
     'svgmin:all',
     'useminPrepare',
