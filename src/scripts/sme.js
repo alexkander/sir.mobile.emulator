@@ -3,7 +3,7 @@
  * http://sirideas.github.io/sir.mobile.emulator/
  * ========================================================================
  * Copyright 2014-2015 Sir Ideas, C. A.
- * Licensed under MIT (https://github.com/sirdieas/sir.mobile.emulator/LICENSE)
+ * Licensed under MIT (https://github.com/SirIdeas/sir.mobile.emulator/blob/master/LICENSE)
  * ========================================================================
  */
 (function($){
