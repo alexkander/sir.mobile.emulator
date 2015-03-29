@@ -479,8 +479,6 @@
       oOptions.oLogos[sURL] = 'sme-icon'
     }
 
-    console.log(oOptions.oLogos);
-
     var countLogos = false
     for(var i in oOptions.oLogos){
       countLogos = true;
