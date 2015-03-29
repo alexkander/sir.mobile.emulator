@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <!-- SME's styles -->
+    <link rel="stylesheet" href="styles/sme.css"/>
+    <title>SirMobileEmulator</title>
+  </head>
+  <body>
+    <!-- Container screen -->
+    <iframe class="sme-container" src="http://sirideas.com"></iframe>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include sme.js -->
+    <script src="scripts/sme.js"></script>
+
+    <script type="text/javascript">
+      $(function(){
+        $('.sme-container').sirMobileEmulator({
+          bShowOpen: false,
+          sId: true,
+          bShowLogoInfo : true,
+          oLogos: {
+            "http://sirideas.com" : "sirideas-icon"
+          },
+          aDevices: [
+            'iphone-5',
+            'ipad-mini',
+            'ipad-3',
+            'nexus-7',
+            'nexus-10',
+            'nexus-4',
+            'nexus-5',
+          ]
+        });
+      });
+    </script>
+
+  </body>
+</html>

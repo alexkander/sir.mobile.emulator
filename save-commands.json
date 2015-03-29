@@ -1,0 +1,6 @@
+{
+    "timeout": 4000,
+    "commands": [
+        "**/*.styl    : stylus -o {relPath} {relPath}{filename}"
+    ]
+}

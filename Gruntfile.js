@@ -18,14 +18,18 @@ module.exports = function(grunt) {
     app: {
       root: 'src',
       distRoot: 'docs/dist/dist',
-      dist: '<%= app.distRoot %>/<%= pkg.version %>'
+      dist: '<%= app.distRoot %>/<%= pkg.version %>',
+      distStable: '<%= app.distRoot %>/stable'
     },
 
     clean: {
       dist: {
         files: [{
           dot: true,
-          src: ['<%= app.dist %>']
+          src: [
+            '<%= app.dist %>',
+            '<%= app.distStable %>/*'
+          ]
         }]
       }
     },
@@ -58,13 +62,22 @@ module.exports = function(grunt) {
     },
 
     compress: {
-      all:{
+      dist:{
         options: {
           archive: '<%= app.distRoot %>/<%= pkg.name %>-<%= pkg.version %>.dist.zip',
           mode: 'zip'
         },
         expand: true,
         cwd: '<%= app.dist %>',
+        src: ['**/*']
+      },
+      stable:{
+        options: {
+          archive: '<%= app.distStable %>/<%= pkg.name %>.dist.zip',
+          mode: 'zip'
+        },
+        expand: true,
+        cwd: '<%= app.distStable %>',
         src: ['**/*']
       }
     },
@@ -76,17 +89,13 @@ module.exports = function(grunt) {
           dot: true,
           cwd: '<%= app.root %>',
           dest: '<%= app.dist %>',
-          src: [
-            'fonts/*'
-          ]
+          src: 'fonts/*'
         },
         {
           expand: true,
           dot: true,
           dest: '<%= app.dist %>',
-          src: [
-            'LICENSE'
-          ]
+          src: 'LICENSE'
         }]
       },
       dist:{
@@ -94,9 +103,16 @@ module.exports = function(grunt) {
           expand: true,
           dot: true,
           dest: 'docs/dist',
-          src: [
-            'LICENSE'
-          ]
+          src: 'LICENSE'
+        }]
+      },
+      stable:{
+        files:[{
+          expand: true,
+          dot: true,
+          cwd: '<%= app.dist %>',
+          dest: '<%= app.distStable %>',
+          src: '**/*'
         }]
       }
     }
@@ -116,8 +132,10 @@ module.exports = function(grunt) {
     'cssmin',
     'uglify',
     'copy:all',
-    'compress',
-    'copy:dist'
+    'compress:dist',
+    'copy:dist',
+    'copy:stable',
+    'compress:stable',
   ]);
 
 };

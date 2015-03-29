@@ -8,7 +8,7 @@
  */
 module.exports = function(grunt) {
   'use strict';
-  
+
   // Project configuration.
   grunt.initConfig({
 
@@ -75,7 +75,7 @@ module.exports = function(grunt) {
 
     concat: {
     },
-    
+
     copy: {
       all:{
         files: [{
@@ -123,7 +123,9 @@ module.exports = function(grunt) {
           '<%= app.dist %>/scripts/**/*.js',
           '<%= app.dist %>/styles/**/*.css',
           '<%= app.dist %>/images/**/*.{png,jpg,jpeg,gif,webp,svg}',
-          '<%= app.dist %>/fonts/*'
+          '<%= app.dist %>/fonts/*',
+          '!<%= app.dist %>/images/sirideas.png',
+          '!<%= app.dist %>/images/sme-white.png'
         ]
       }
     },

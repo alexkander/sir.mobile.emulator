@@ -1,6 +1,6 @@
 {
   "name": "sme",
-  "version": "0.0.1-beta",
+  "version": "1.0.0",
   "dependencies": {
     "jquery": "1.9.0"
   },

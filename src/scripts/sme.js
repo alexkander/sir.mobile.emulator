@@ -1,5 +1,5 @@
 /* ========================================================================
- * Sir Mobile Emulator: sme.js 0.0.1-beta
+ * Sir Mobile Emulator: sme.js
  * http://sirideas.github.io/sir.mobile.emulator/
  * ========================================================================
  * Copyright 2014-2015 Sir Ideas, C. A.
@@ -301,7 +301,7 @@
 
     oOptions.oButtons = {};
     oOptions.tButtonsGroup.empty();
-    
+
     for(var i in oOptions.oActions){
       if(oOptions.oDevice.buttons[i]){
         oOptions.oButtons[i] = $('<div/>')
@@ -382,7 +382,7 @@
   },
 
   fnRenderOrientationsButtons = function(oOptions){
-    
+
     oOptions.tOrientationsButtons = {};
 
     oOptions.tOrientationsButtonsGroup = $('<span/>')
@@ -404,7 +404,7 @@
         oOptions.tOrientationsButtonsGroup.append(oOptions.tOrientationsButtons[sOrientation]);
       })(aOrientations[i])
     }
-    
+
     oOptions.tOptionsInner.append(oOptions.tOrientationsButtonsGroup);
     fnSetOrientation(oOptions, oOptions.sOrientation);
 
@@ -431,7 +431,7 @@
         oOptions.tDevicesList.append(oOptions.tDevicesItems[sDevice]);
       })(oOptions.aDevices[i])
     }
-    
+
     oOptions.tDevicesText = $('<span/>')
       .addClass(oClasses.option)
       .addClass(oClasses.text)
@@ -476,8 +476,10 @@
 
     if(oOptions.bShowLogoInfo === true){
       showLogos = true;
-      oOptions.oLogos[sURL] = 'icon-info-outline'        
+      oOptions.oLogos[sURL] = 'sme-icon'
     }
+
+    console.log(oOptions.oLogos);
 
     var countLogos = false
     for(var i in oOptions.oLogos){
@@ -503,7 +505,7 @@
             .append('<span class="'+oOptions.oLogos[i]+'"/>')
           );
       }
-      
+
       oOptions.tOptions.append(tOptionsInnerRight)
 
     }
@@ -613,10 +615,10 @@
     if(oOptions.bOrientations)     fnRenderOrientationsButtons(oOptions);
     if(oOptions.aDevices.length>1) fnRenderDevicesButtons(oOptions);
 
-    // fnRenderLogos(oOptions);
+    fnRenderLogos(oOptions);
 
   },
-  
+
   fnInit = function(tContainer, oOptions){
 
     oOptions = $.extend({}, oDefaults, oOptions);
@@ -673,7 +675,7 @@
     fnRefresh(oOptions);
 
     return oOptions;
-    
+
   },
 
   __call = function(pOptions){
@@ -694,5 +696,5 @@
   });
 
   $('['+oClasses.auto+']').sirMobileEmulator();
-  
+
 })($);

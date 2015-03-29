@@ -1,5 +1,5 @@
 /* ========================================================================
- * Sir Mobile Emulator: sme.styl 0.0.1-beta
+ * Sir Mobile Emulator: sme.styl
  * http://sirideas.github.io/sir.mobile.emulator/
  * ========================================================================
  * Copyright 2014-2015 Sir Ideas, C. A.
@@ -71,6 +71,19 @@
 }
 .icon-right-circled:before {
   content: '\e807';
+}
+.sirideas-icon,
+.sme-icon {
+  background-size: cover;
+  display: inline-block;
+  width: 27px;
+  height: 28px;
+}
+.sme-icon {
+  background-image: url("http://sirideas.github.io/sir.mobile.emulator/images/sme-white.png");
+}
+.sirideas-icon {
+  background-image: url("http://sirideas.github.io/sir.mobile.emulator/images/sirideas.png");
 }
 html,
 body {
