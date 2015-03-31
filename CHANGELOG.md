@@ -1,6 +1,10 @@
+## Version 1.0.2 2015-03-31
+
+* Overflow to class sme-display-parent
+
 ## Version 1.0.1 2015-03-29
 
-* Remove çonsole.log statement
+* Remove console.log statement
 
 ## Version 1.0.0 2015-03-29
 
