@@ -297,7 +297,7 @@
     oOptions.oDevice = oDevices[sDevice];
     oOptions.tDevicesText.html(oOptions.oDevice.name);
 
-    navigator.userAgent = oOptions.oDevice.userAgent
+    // navigator.userAgent = oOptions.oDevice.userAgent
 
     oOptions.oButtons = {};
     oOptions.tButtonsGroup.empty();

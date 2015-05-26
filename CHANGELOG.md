@@ -1,5 +1,9 @@
 ## Version 1.0.2 2015-03-31
 
+* Remove set navigator.userAgent
+
+## Version 1.0.2 2015-03-31
+
 * Overflow to class sme-display-parent
 
 ## Version 1.0.1 2015-03-29
