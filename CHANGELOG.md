@@ -1,4 +1,4 @@
-## Version 1.0.2 2015-03-31
+## Version 1.0.2 2015-05-26
 
 * Remove set navigator.userAgent
 
