@@ -1,4 +1,4 @@
-# Sir Mobile Emulator
+# DEPECRATED. Sir Mobile Emulator
 Emulador visual de dispositivos móviles actuales para probar y presentar aplicaciones HTML5.
 
 ## Usos
